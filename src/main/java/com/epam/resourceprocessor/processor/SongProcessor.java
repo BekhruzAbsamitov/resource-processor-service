@@ -3,12 +3,14 @@ package com.epam.resourceprocessor.processor;
 import com.epam.resourceprocessor.exception.BadRequestException;
 import com.mpatric.mp3agic.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 
 @Slf4j
+@Component
 public class SongProcessor implements ResourceProcessor<SongMetadata> {
     @Override
     public Optional<SongMetadata> process(File file) {
